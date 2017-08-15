@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <style>
+        input[type=text], input[type=password] {
+            height: 30px;
+            display: block;
+            padding-left: 10px;
+            width: 200px;
+        }
+
+        input[type=submit] {
+            width: 214px;
+            height: 30px;
+            background: lightblue;
+            border-width: 0;
+            margin-top: 5px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Element Locker</h1>
+    <hr>
+    <p>Try changing the attributes of the input. Look what will happen. </p>
+    <form action="">
+        <input id="username" type="text" placeholder="Username">
+        <input id="value" type="password" placeholder="Password" />
+        <input type="submit" value="Submit">
+    </form>
+    <hr>
+    <script src="ElementLocker.js"></script>
+    <script>
+        new ElementLocker(document.getElementById('value'), ['type', 'placeholder', 'id']).lock();
+    </script>
+</body>
+
+</html>
